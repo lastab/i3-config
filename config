@@ -157,6 +157,16 @@ bar {
 
 
 
+### custom configs
+#screen lock with i3lock 
+bindsym $sup+shift+x exec ~/.lock.sh
+
+#making the function key work
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
@@ -169,3 +179,11 @@ bindsym XF86AudioPlay exec playerctl play
 bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+
+# wallpaper
+exec_always --no-startup-id feh --bg-center ~/git/graphics/wallpaper/47074_legend_of_korra.jpg
+
+exec ~/git/StartUp/xcowsay_welcome.sh
+exec nm-applet
+exec osdlyrics
+exec emacs
