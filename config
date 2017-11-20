@@ -183,18 +183,19 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86AudioStop exec playerctl stop
 
 # when screen is connected
-i3-msg "workspace 2, move workspace to output DP2"
-i3-msg "workspace 4, move workspace to output DP2"
-i3-msg "workspace 6, move workspace to output DP2"
-i3-msg "workspace 8, move workspace to output DP2"
-i3-msg "workspace 10, move workspace to output DP2"
+#i3-msg "workspace 2, move workspace to output DP2"
+#i3-msg "workspace 4, move workspace to output DP2"
+#i3-msg "workspace 6, move workspace to output DP2"
+#i3-msg "workspace 8, move workspace to output DP2"
+#i3-msg "workspace 10, move workspace to output DP2"
 
 
 # wallpaper
-exec_always --no-startup-id feh --bg-center ~/Pictures/walpaper.jpg
+exec_always --no-startup-id feh --bg-center ~/Pictures/wallpaper.jpg
 
 exec ~/git/StartUp/xcowsay_welcome.sh
 exec nm-applet
 exec guake
 exec indicator-kdeconnect
+exec dropbox start
 # exec compton -c -r8 -l-12 -t-8  -b  -G  -f -D30 -I0.45 -O0.45 -o0.0 --unredir-if-possible  --backend glx --glx-no-stencil --glx-no-rebind-pixmap
