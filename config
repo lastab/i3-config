@@ -158,7 +158,7 @@ bar {
 
 
 ### custom configs
-#screen lock with i3lock 
+#screen lock with i3lock
 bindsym $sup+shift+x exec i3lock
 bindsym Mod1+F2 exec gmrun
 
@@ -182,13 +182,19 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86AudioStop exec playerctl stop
 
+# when screen is connected
+i3-msg "workspace 2, move workspace to output DP2"
+i3-msg "workspace 4, move workspace to output DP2"
+i3-msg "workspace 6, move workspace to output DP2"
+i3-msg "workspace 8, move workspace to output DP2"
+i3-msg "workspace 10, move workspace to output DP2"
+
 
 # wallpaper
-exec_always --no-startup-id feh --bg-center ~/git/graphics/wallpaper/47074_legend_of_korra.jpg
+exec_always --no-startup-id feh --bg-center ~/Pictures/walpaper.jpg
 
 exec ~/git/StartUp/xcowsay_welcome.sh
 exec nm-applet
-exec osdlyrics
-exec emacs
-exec compton -c -r8 -l-12 -t-8  -b  -G  -f -D30 -I0.45 -O0.45 -o0.0 --unredir-if-possible  --backend glx --glx-no-stencil --glx-no-rebind-pixmap
-exec albert
+exec guake
+exec indicator-kdeconnect
+# exec compton -c -r8 -l-12 -t-8  -b  -G  -f -D30 -I0.45 -O0.45 -o0.0 --unredir-if-possible  --backend glx --glx-no-stencil --glx-no-rebind-pixmap
